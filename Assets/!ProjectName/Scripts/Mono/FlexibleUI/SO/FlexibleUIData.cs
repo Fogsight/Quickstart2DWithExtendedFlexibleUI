@@ -14,9 +14,12 @@ public class FlexibleUIData : ScriptableObject {
     public float elementHeight;
     public float scaleUI = 1f;
 
+    [Header("Slider (sprites are in order of appearence)")]
+    public Sprite[] sprites;
+
     private static PopRef popRef;
 
-    private void OnValidate() {
+    public void OnValidate() {
         //Upon switching item list, move everything to new one
         int count = allUIObjects.Items.Count - 1;
         for (int i = count; i >= 0; i--) {

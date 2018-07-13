@@ -10,7 +10,7 @@ public abstract class FlexibleUI : MonoBehaviour {
     private void OnEnable() {
         if (popRef == null) popRef = FindObjectOfType<PopRef>();
         if (flexibleUIData == null) flexibleUIData = popRef.themeSwap.allFlexibleUIData[popRef.themeSwap.activeIndex];
-        OnSkinUI();
+        //OnSkinUI();
     }
 
     public virtual void OnSkinUI() {
@@ -18,7 +18,7 @@ public abstract class FlexibleUI : MonoBehaviour {
         if (layoutElement != null) {
             UpdateLayout(layoutElement, flexibleUIData.elementWidth, flexibleUIData.elementHeight);
         }
-        if (applyScale && transform.parent.GetComponent<FlexibleUI>() == false) transform.localScale = new Vector2(flexibleUIData.scaleUI, flexibleUIData.scaleUI);
+        if (applyScale && transform.parent != null && transform.parent.GetComponent<FlexibleUI>() == null) transform.localScale = new Vector2(flexibleUIData.scaleUI, flexibleUIData.scaleUI);
     }
 
     private void OnValidate() {

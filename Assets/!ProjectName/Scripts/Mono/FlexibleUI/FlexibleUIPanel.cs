@@ -10,7 +10,6 @@ public class FlexibleUIPanel : FlexibleUI {
         base.OnSkinUI();
         image = GetComponent<Image>();
         image.type = Image.Type.Sliced;
-
         image.sprite = flexibleUIData.buttonSprite;
         image.color = flexibleUIData.color;
     }

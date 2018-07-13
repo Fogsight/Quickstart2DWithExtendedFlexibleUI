@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   note: Adding more than one of the same Theme is disallowed because it will merge
     their contents!
-  activeIndex: 1
+  activeIndex: 0
   allFlexibleUIData:
   - {fileID: 11400000, guid: a9b588b5928f4644d8dc142d863ef189, type: 2}

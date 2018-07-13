@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour {
     private IEnumerator Start() {
         UIObjects.Instance.UICanvas.gameObject.SetActive(true);
         UIObjects.Instance.mainMenu.gameObject.SetActive(true);
-        Debug.LogFormat(this, "<color=blue>Remove following loop to stop demo</color>");
+        Debug.LogFormat(this, "<color=blue>Remove following loop to stop demo (and convert back from Coroutine)</color>");
         #region Remove This Demo Code
         UIObjects.Instance.debugText.text = "Playing demo";
         while (true) {

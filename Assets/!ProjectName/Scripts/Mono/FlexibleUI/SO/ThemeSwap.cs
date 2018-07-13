@@ -27,6 +27,9 @@ public class ThemeSwap : ScriptableObject {
     public void Swap() {
         if (previousFlexibleUIData == null) OnEnable();
 
+        //Check if activeIndex is within the existing range
+        if (activeIndex > allFlexibleUIData.Count - 1) activeIndex = 0;
+
         //Adds unique themes to the new elements
         if (allFlexibleUIData.Count > previousFlexibleUIData.Count) {
             //if there are no spare themes

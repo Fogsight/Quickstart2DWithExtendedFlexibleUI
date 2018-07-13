@@ -3,7 +3,6 @@ using UnityEditor;
 using UnityEngine;
 
 public abstract class FlexibleUIInstance : Editor {
-
     public static PopRef popRef;
 
     [MenuItem("GameObject/Flexible UI/Button", priority = 0)]
@@ -20,6 +19,15 @@ public abstract class FlexibleUIInstance : Editor {
     [MenuItem("GameObject/Flexible UI/Panel", priority = 0)]
     public static void AddPanel() {
         Create<FlexibleUIPanel>("Panel");
+    }
+
+    [MenuItem("GameObject/Flexible UI/Slider", priority = 0)]
+    public static void AddSlider() {
+        var targetT = Selection.activeTransform;
+        EditorApplication.ExecuteMenuItem("GameObject/UI/Slider");
+        var slider = Selection.activeGameObject;
+        slider.transform.SetParent(targetT, true);
+        slider.AddComponent<FlexibleUISlider>();
     }
 
     [MenuItem("GameObject/Flexible UI/Text", priority = 0)]
@@ -45,7 +53,6 @@ public abstract class FlexibleUIInstance : Editor {
     }
 
     private static void PopRefCheck() {
-
         if (popRef == null) popRef = FindObjectOfType<PopRef>();
     }
 }

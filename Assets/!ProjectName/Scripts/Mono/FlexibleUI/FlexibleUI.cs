@@ -10,7 +10,7 @@ public abstract class FlexibleUI : MonoBehaviour {
     private void OnEnable() {
         if (popRef == null) popRef = FindObjectOfType<PopRef>();
         if (flexibleUIData == null) flexibleUIData = popRef.themeSwap.allFlexibleUIData[popRef.themeSwap.activeIndex];
-        //OnSkinUI();
+        OnSkinUI();
     }
 
     public virtual void OnSkinUI() {

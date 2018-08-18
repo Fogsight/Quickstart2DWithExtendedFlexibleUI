@@ -10,14 +10,14 @@ public abstract class Menu : MonoBehaviour {
     public List<Selectable> Selectables { get; set; }
 
     /// <summary> Iterate backwards, self removing objects</summary>
-    private List<Menu> activeMenus = new List<Menu>();
+    //private List<Menu> activeMenus = new List<Menu>();
 
-    private void OnEnable() {
-        activeMenus.Add(this);
+    protected virtual void OnEnable() {
+        //activeMenus.Add(this);
     }
 
-    private void OnDisable() {
-        activeMenus.Remove(this);
+    protected virtual void OnDisable() {
+        //activeMenus.Remove(this);
     }
 
     private void Update() {

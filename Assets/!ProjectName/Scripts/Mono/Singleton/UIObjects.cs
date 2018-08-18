@@ -16,4 +16,20 @@ public class UIObjects : MonoBehaviour {
     //Menus
     [Header("Menus")]
     public MainMenu mainMenu;
+
+    private void Start() {
+        SetupButtonEvents();
+    }
+
+    private void SetupButtonEvents() {
+        //Main Menu
+        mainMenu.playGame.onClick.AddListener(() => {
+            mainMenu.gameObject.SetActive(false);
+            InputManager.Instance.GameStart();
+        });
+        mainMenu.quitGame.onClick.AddListener(() => {
+            mainMenu.gameObject.SetActive(false);
+            InputManager.Instance.Quit();
+        });
+    }
 }

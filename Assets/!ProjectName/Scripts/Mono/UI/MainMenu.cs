@@ -5,25 +5,19 @@ public class MainMenu : Menu {
     public Button playGame;
     public Button quitGame;
 
-    private void OnEnable() {
+    protected override void OnEnable() {
+        base.OnEnable();
         playGame.Select();
+        //Pause time, lock controls
+    }
+    protected override void OnDisable() {
+        base.OnDisable();
+        //Resume time, unlock controls
     }
 
     private void Awake() {
         Selectables = new List<Selectable>() {
             playGame,
             quitGame };
-    }
-
-    private void Start() {
-        //Setup UI listeners
-        playGame.onClick.AddListener(() => {
-            gameObject.SetActive(false);
-            InputManager.Instance.GameStart();
-        });
-        quitGame.onClick.AddListener(() => {
-            gameObject.SetActive(false);
-            InputManager.Instance.Quit();
-        });
     }
 }

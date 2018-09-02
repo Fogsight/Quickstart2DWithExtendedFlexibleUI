@@ -35,8 +35,8 @@ public class InputManager : MonoBehaviour {
             //Controls input
             if (Input.GetKeyDown(KeyCode.Mouse0)) { }
 
-            PixelPerfectCamera.Instance.pixelScale += Input.GetAxis("Mouse ScrollWheel");
-            PixelPerfectCamera.Instance.pixelScale = Mathf.Clamp(PixelPerfectCamera.Instance.pixelScale, PixelPerfectCamera.minRange, PixelPerfectCamera.maxRange);
+            PixelScalingCamera.Instance.pixelScale += Input.GetAxis("Mouse ScrollWheel");
+            PixelScalingCamera.Instance.pixelScale = Mathf.Clamp(PixelScalingCamera.Instance.pixelScale, PixelScalingCamera.minRange, PixelScalingCamera.maxRange);
         }
 
         //Escape Menu

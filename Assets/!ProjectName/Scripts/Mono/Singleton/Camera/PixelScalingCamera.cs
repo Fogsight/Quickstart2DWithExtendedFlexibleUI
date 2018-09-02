@@ -2,8 +2,8 @@
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class PixelPerfectCamera : MonoBehaviour {
-    public static PixelPerfectCamera Instance { get; private set; }
+public class PixelScalingCamera : MonoBehaviour {
+    public static PixelScalingCamera Instance { get; private set; }
 
     public const float minRange = .25f;
     public const float maxRange = 1f;

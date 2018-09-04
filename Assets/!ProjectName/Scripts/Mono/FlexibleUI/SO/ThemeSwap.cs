@@ -25,20 +25,21 @@ public class ThemeSwap : ScriptableObject {
     }
 
     public void Swap() {
+        int activeThemesCount = allFlexibleUIData.Count;
         if (previousFlexibleUIData == null) OnEnable();
 
         //Check if activeIndex is within the existing range
-        if (activeIndex > allFlexibleUIData.Count - 1) activeIndex = 0;
+        if (activeIndex > activeThemesCount - 1) activeIndex = 0;
 
         //Adds unique themes to the new elements
-        if (allFlexibleUIData.Count > previousFlexibleUIData.Count) {
+        if (activeThemesCount > previousFlexibleUIData.Count) {
             //if there are no spare themes
-            if (allFlexibleUIData.Count > popRef.allThemes.Count) {
+            if (activeThemesCount > popRef.allThemes.Count) {
                 allFlexibleUIData = previousFlexibleUIData.ToList();
                 Debug.LogError("Themes cannot be used twice due to unique collections, create new Theme first", popRef.allThemes[0]);
             }
             else {
-                int indexLimit = allFlexibleUIData.Count;
+                int indexLimit = activeThemesCount;
                 allFlexibleUIData = previousFlexibleUIData.ToList();
                 foreach (var item in popRef.allThemes) {
                     if (!allFlexibleUIData.Contains(item)) {
@@ -59,7 +60,8 @@ public class ThemeSwap : ScriptableObject {
             }
         }
 
-        for (int i = 0; i < allFlexibleUIData.Count; i++) {
+        activeThemesCount = allFlexibleUIData.Count;
+        for (int i = 0; i < activeThemesCount; i++) {
             if (allFlexibleUIData[i] != previousFlexibleUIData[i]) {
                 for (int j = 0; j < previousFlexibleUIData[i].allUIObjects.Items.Count; j++) {
                     CollectionItemUI collectionItemUI = (CollectionItemUI)previousFlexibleUIData[i].allUIObjects.Items[j];
@@ -73,8 +75,7 @@ public class ThemeSwap : ScriptableObject {
             }
         }
 
-        int count = allFlexibleUIData.Count;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < activeThemesCount; i++) {
             ItemsCollectionUI allUIObjects = allFlexibleUIData[i].allUIObjects;
             int subCount = allUIObjects.Items.Count - 1;
             for (int j = subCount; j >= 0; j--) {
@@ -87,7 +88,8 @@ public class ThemeSwap : ScriptableObject {
             }
         }
 
-        for (int i = 0; i < allFlexibleUIData.Count; i++) {
+        for (int i = 0; i < activeThemesCount; i++) {
+            allFlexibleUIData[i].OnValidate();
             previousFlexibleUIData[i] = allFlexibleUIData[i];
         }
     }

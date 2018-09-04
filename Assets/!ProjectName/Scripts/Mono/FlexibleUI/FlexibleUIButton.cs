@@ -16,5 +16,7 @@ public class FlexibleUIButton : FlexibleUI {
         image.type = Image.Type.Sliced;
         image.sprite = flexibleUIData.buttonSprite;
         image.color = flexibleUIData.color;
+        //Conform text RectTransform sizeDelta to the button if part of a layout
+        if (GetComponent<LayoutElement>() != null) GetComponentInChildren<FlexibleUIText>().SetSizeDelta();
     }
 }

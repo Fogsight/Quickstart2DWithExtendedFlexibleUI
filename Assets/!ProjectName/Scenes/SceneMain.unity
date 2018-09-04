@@ -964,7 +964,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &434122692
 MonoBehaviour:
@@ -1294,9 +1294,9 @@ MonoBehaviour:
   themeSwap: {fileID: 11400000, guid: 2529f41349196bf45af2122f4cc807ef, type: 2}
   fontAsset: {fileID: 11400000, guid: db931d91c8b82d142ad683aa8b96d5b5, type: 2}
   allThemes:
-  - {fileID: 11400000, guid: 7f4b22619883c7c4b8eb93890a1328e0, type: 2}
-  - {fileID: 11400000, guid: 1a57ce79eacabb843bb9203521951f42, type: 2}
   - {fileID: 11400000, guid: a9b588b5928f4644d8dc142d863ef189, type: 2}
+  - {fileID: 11400000, guid: 1a57ce79eacabb843bb9203521951f42, type: 2}
+  - {fileID: 11400000, guid: 7f4b22619883c7c4b8eb93890a1328e0, type: 2}
   terrain: {fileID: 891348733}
   structures: {fileID: 973946430}
   characters: {fileID: 582499615}
@@ -2324,7 +2324,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842209532
 MonoBehaviour:

@@ -9,6 +9,7 @@ public class FlexibleUIData : ScriptableObject {
     public Color color;
     public TMP_FontAsset fontAsset;
     public Material fontMaterial;
+    public bool textWrap = true;
     public float fontSize;
     public float elementWidth;
     public float elementHeight;

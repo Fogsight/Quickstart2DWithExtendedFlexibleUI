@@ -1,7 +1,7 @@
 # Quickstart2DWithExtendedFlexibleUI
 Template for the new Unity project with ExtendedFlexibleUI
 
-Originaly created and shared for the GDN's (https://discord.gg/GDN) https://github.com/Game-Dev-Network/code-gift
+Originaly created and shared for the [GDN's](https://discord.gg/GDN) Code Gift project https://github.com/Game-Dev-Network/code-gift
 
 Featured Extended Flexible UI uses Scriptable Objects to dynamically swap styles of UI elements. Supports multiple swappable themes. Example themes setup in !Settings folder. "Theme Swap" Scriptable Object can keep and/or swap multiple themes.
 

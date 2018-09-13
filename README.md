@@ -1,5 +1,5 @@
 # Quickstart2DWithExtendedFlexibleUI
-Template for the new Unity project with ExtendedFlexibleUI
+Template for the new Unity project with ExtendedFlexibleUI (work in constant progress)
 
 Originaly created and shared for the [GDN's](https://discord.gg/GDN) Code Gift project https://github.com/Game-Dev-Network/code-gift
 
